@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Quiz para Cami</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Cami, responde este pequeño quiz 💙</h1>
+  <div class="quiz-container">
+    <p class="question">¿Cuál es la mejor forma de pasar este domingo?</p>
+    <div class="answers">
+      <button onclick="wrongAnswer()">Ir al parque sola</button>
+      <button onclick="wrongAnswer()">Dormir todo el día</button>
+      <button onclick="correctAnswer()">Salir con Alex</button>
+    </div>
+    <p id="message" class="message hidden"></p>
+  </div>
+  <div id="confetti-container" class="hidden"></div>
+  <script src="script.js"></script>
+</body>
+</html>
