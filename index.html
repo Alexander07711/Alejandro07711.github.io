@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Un Quiz para Cami</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aceptas cami?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Cami, responde este pequeño quiz 💙</h1>
-  <div class="quiz-container">
-    <p class="question">¿Cuál es la mejor forma de pasar este domingo?</p>
-    <div class="answers">
-      <button onclick="wrongAnswer()">Ir al parque sola</button>
-      <button onclick="wrongAnswer()">Dormir todo el día</button>
-      <button onclick="correctAnswer()">Salir con Alex</button>
+    <div class="container">
+        <h1 class="title">Hola Cami 😄</h1>
+        <div id="step1" class="step">
+            <p class="question">¿Qué te parece salir de paseo este domingo? 🌞</p>
+            <button class="btn" onclick="nextStep('step1', 'step2')">¡Me suena genial!</button>
+            <button class="btn" onclick="nextStep('step1', 'step3')">Hmm... no estoy segura. 🤔</button>
+        </div>
+
+        <div id="step2" class="step" style="display: none;">
+            <p class="question">¿Sabías que ese dia no va a llover? 🌤️</p>
+            <button class="btn" onclick="nextStep('step2', 'step4')">¡Eso suena increíble! 😍</button>
+            <button class="btn" onclick="nextStep('step2', 'step3')">Creo que no me convence... 🙄</button>
+        </div>
+
+        <div id="step3" class="step" style="display: none;">
+            <p class="question">¿Qué tal si elegimos un lugar con buena comida y unas cervesas? 🍕🍹</p>
+            <button class="btn" onclick="nextStep('step3', 'step4')">¡Ya me convenciste! 🎉</button>
+            <button class="btn" onclick="nextStep('step3', 'step5')">Mmm... no sé. 🙈</button>
+        </div>
+
+        <div id="step4" class="step" style="display: none;">
+            <p class="question">¡Entonces es un trato! ¿Nos vamos a las 10 AM? 🕙</p>
+            <button class="btn" onclick="showFinalMessage()">¡Claro que sí! </button>
+        </div>
+
+        <div id="step5" class="step" style="display: none;">
+            <p class="question">¿Aún no te convenzo? 🥺</p>
+            <button class="btn" onclick="showFinalMessage()">¡Bueno, quizás para otro día! 😅</button>
+        </div>
+
+        <div id="finalMessage" class="finalMessage" style="display: none;">
+            <p>¡Ya está decidido, Cami, Te veo el domingo para un paseo xhay y unos pizza y vinito jaja</p>
+        </div>
     </div>
-    <p id="message" class="message hidden"></p>
-  </div>
-  <div id="confetti-container" class="hidden"></div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
